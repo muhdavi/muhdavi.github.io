@@ -21,14 +21,14 @@
 title: Muhammad Davi
 email: davi_muhammad@yahoo.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Berbagai tentang sesuatu yang pernah saya lakukan.
+  Pertahanan, Dorongan dan Motivasi
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: muhdavi
 github_username:  muhdavi
 
 # Build settings
-theme: minima
+theme: jekyll-theme-so-simple # theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
