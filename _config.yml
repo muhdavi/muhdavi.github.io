@@ -28,8 +28,7 @@ twitter_username: muhdavi
 github_username:  muhdavi
 
 # Build settings
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
-theme: jekyll-theme-so-simple # theme: minima
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
