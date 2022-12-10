@@ -1,24 +1,36 @@
-<footer id="footer" class="site-footer">
-    {% include footer-custom.html %}
+<!-- The Footer -->
 
-    {%- if site.footer_links -%}
-    <div class="social-icons">
-        {%- for footer_link in site.footer_links -%}
-        {%- if footer_link.url contains "://" -%}
-        {%- assign url = footer_link.url -%}
-        {%- else -%}
-        {%- assign url = footer_link.url | relative_url -%}
-        {%- endif -%}
-        <a class="social-icon" href="{{ url }}"><i class="{{ footer_link.icon | default: 'fas fa-link' }} fa-2x" title="{{ footer_link.title }}"></i></a>
-        {%- endfor -%}
-    </div>
-    {%- endif -%}
+<footer>
+  <div class="container pl-lg-4 pr-lg-4">
+    <div class="d-flex justify-content-between align-items-center text-muted ml-md-3 mr-md-3">
+      <div class="footer-left">
+        <p class="mb-0">
+          © {{ 'now' | date: "%Y" }}
+          <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+          {% if site.data.locales[site.lang].copyright.brief %}
+          <span data-toggle="tooltip" data-placement="top"
+            title="{{ site.data.locales[site.lang].copyright.verbose }}">{{ site.data.locales[site.lang].copyright.brief }}</span>
+          {% endif %}
+        </p>
+      </div>
 
-    <div class="copyright">
-        {% if site.copyright %}
-        {{ site.copyright | markdownify }}
-        {% else %}
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
-        {% endif %}
+      <div class="footer-right">
+        <p class="mb-0">
+
+          {% capture _platform %}
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+          {% endcapture %}
+
+          {% capture _theme %}
+          <a href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener">Chirpy</a>
+          {% endcapture %}
+
+          {{ site.data.locales[site.lang].meta
+            | default: 'Powered by :PLATFORM with :THEME theme.'
+            | replace: ':PLATFORM', _platform | replace: ':THEME', _theme
+          }}
+        </p>
+      </div>
     </div>
+  </div>
 </footer>
