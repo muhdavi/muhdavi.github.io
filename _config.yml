@@ -24,7 +24,7 @@ title: Muhammad Davi                          # the main title
 tagline: Pertahanan, Dorongan dan Motivasi    # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  Static web atau blog dibangun menggunakan Jekyll untuk catatan dan tutorial.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: ''
@@ -38,7 +38,7 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
+  name: Muhammad Davi
   email: davi_muhammad@yahoo.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
