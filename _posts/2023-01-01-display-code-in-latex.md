@@ -3,7 +3,7 @@ title: Display code in LaTeX
 author: muhdavi
 date: 2023-01-01 14:10:00 +0700
 categories: [Blogging, Tutorial]
-tags: [reference]
+tags: [LaTeX]
 render_with_liquid: false
 ---
 
@@ -95,4 +95,78 @@ An example code fragment in my thesis (demonstrating a trace extension of the Op
 ![Desktop View](/assets/posts/20230101/assign.png){: width="972" height="589" }
 _Result from Example Code_
 
-Update: Due to reader requests, I want to provide a minimal working sample for the code displayed here. As wordpress does not allow me to upload a .tex file, you can copy the whole sample from pastebin. Just copy the code from there to a .tex file and compile it!
+Full code
+
+```latex
+\documentclass{article}
+
+\usepackage{color}
+\usepackage{listings}
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{forestGreen}{RGB}{34,139,34}
+\definecolor{orangeRed}{RGB}{255,69,0}
+
+\lstdefinelanguage{bpel}{
+  morekeywords={name,linkName,isolated,parallel,partnerLink,operation,portType,inputVariable,createInstance,
+  variable,element,location,importType,partnerLinkType,myRole,messageType,properties,level,outputVariable,
+  xmlns,version,encoding}
+}
+\lstdefinelanguage{xaml}{
+  morekeywords={TypeArguments,Name,Default,DisplayName,OperationName,ServiceContractName,Key,AddressUri,
+  CanCreateInstance, LogName, Message, MessageNumber, Expression,CorrelationHandle,Request}
+}
+
+\lstdefinelanguage{xml}{
+  basicstyle=\small,
+  sensitive=false,
+}
+
+\lstdefinestyle{workflowStyle}{
+  language=XML,
+  alsolanguage=bpel,
+  alsolanguage=xaml,
+  %Formatting
+  basicstyle=\scriptsize,
+  sensitive=true,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny,
+  tabsize=4,
+  numbersep=3pt,
+  extendedchars=true,
+  xleftmargin=2em,
+  lineskip=1pt,
+  breaklines,
+  captionpos=t,
+  %Coloring
+  backgroundcolor=\color{lightgray},
+  morekeywords={BooleanExpression},
+  alsoletter={:,<,>,/,?},
+  morestring=[b]{"},
+  morecomment=[s]{<!--}{-->},keywordstyle=\color{forestGreen},
+  identifierstyle=\color{blue}\ttfamily,
+  stringstyle=\color{orangeRed}\ttfamily,
+  commentstyle=\color{forestGreen}\ttfamily
+}
+
+\lstnewenvironment{workflow-code}[2]{
+\lstset{caption=#1,label=#2,style=workflowStyle}
+}{}
+
+\begin{document}
+
+\begin{workflow-code}{caption}{label}
+<assign name ="LogActivity">
+    <trace>
+        <log level="info" location="onComplete">
+            <from variable="logMessage"/>
+        </log>
+    </trace>
+    <!--copy a meaningful message to variable logMessage-->
+</assign>
+\end{workflow-code}
+
+\end{document}
+```
