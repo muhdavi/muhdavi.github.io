@@ -1,7 +1,7 @@
 ---
 title: Display code in LaTeX
 author: muhdavi
-date: 2023-01-01 14:10:00 +0700
+date: 2023-01-01 10:10:00 +0700
 categories: [Blogging, Tutorial]
 tags: [LaTeX]
 render_with_liquid: false
