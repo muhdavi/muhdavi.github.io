@@ -13,7 +13,7 @@ const resource = [
     '{{ "/sw.js" | relative_url }}',
 
     /* --- HTML --- */
-    '{{ "/index.html" | relative_url }}',
+    '{{ "/index.md" | relative_url }}',
     '{{ "/404.html" | relative_url }}',
 
     {% for tab in site.tabs %}
