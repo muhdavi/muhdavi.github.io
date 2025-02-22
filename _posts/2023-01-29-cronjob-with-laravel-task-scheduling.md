@@ -1,7 +1,7 @@
 ---
 title: Cronjob with Laravel Task Scheduling
 author: muhdavi
-date: 2023-01-22 10:10:00 +0700
+date: 2023-01-29 10:10:00 +0700
 categories: [Blogging, Tutorial]
 tags: [Laravel, PHP]
 render_with_liquid: false
