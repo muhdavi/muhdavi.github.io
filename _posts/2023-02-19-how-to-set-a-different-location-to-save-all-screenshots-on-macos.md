@@ -30,7 +30,7 @@ Now we need to configure the default screenshot tool on macOS so that it automat
 3. Select that specific location that you created earlier.
 4. Now click "Ok", or "Open", or whatever it says to confirm that new location.
 
-![macOS Screenshoot](/assets/posts/20230212/macos-screenshot.png){: width="972" height="589" }
+![macOS Screenshoot](/assets/posts/20230219/macos-screenshot.png){: width="972" height="589" }
 
 That's it! From now on, whenever you use the default screenshot tool, it will automatically save all the screenshots in that newly specified location. This will help your desktop remain clutter free!
 
